@@ -1,0 +1,402 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title> PLatinum Institute</title>
+    <link rel="icon" href="main/LOGO v3.jpg" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="scripts.js" as="script">
+    <script src="script.js" type="text/javascript"></script>
+
+</head>
+<body>
+
+    <nav class="stroke">
+        <img src="main/LOGO v3.jpg" />
+
+        <h1 class="testing">Platinum Institute </h1>
+
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#what-is">About</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <!--<li><a href="gallery.html">Gallery</a></li>-->
+            <li><a href="#get-in-touch">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- here as much as possible i tried to use semantic elements like main or section article -->
+    <main>
+
+        <div id="body-background">
+
+            <video style="width:100%;" src="main/a.mp4" preload="auto" autoplay muted loop> </video>
+
+        </div>
+
+        <article class="fade-in-top">
+            <h2>Platinum Institute </h2>
+            <p>Always aiming to provide world-class training, education and skills development qualifications.    </p>
+            <a href="#what-is"> Learn More</a>
+        </article>
+
+    </main>
+
+
+    <section class="what-is" id="what-is">
+
+        <h1 class="animated">Why Choose us?</h1>
+
+        <section class="animated" style="padding-bottom: 0vh;">
+            <img class="box-shadow-remove" src="main/logo3.png" style="top:3%;" />
+            <div>
+                <h2> About Us</h2>
+                <p>
+                    Platinum Institute aims to provide world-class training, education, and skills development qualifications. It has been committed to providing the highest quality of training and formal education to its clients internationally. It is driven by our team’s passion for quality education, training, development, and commitment to excellent service.
+                </p>
+            </div>
+        </section>
+
+
+    </section>
+
+    <article style="height: auto; width: 100%; padding-bottom: 15vh;">
+
+        <div class="d-flex justify-content-center animated">
+            <video poster="team pic/thumbnail1.png" style="width: 65%; height: auto; border-radius: 8px; filter: blur(0px);" class="opacity-override video-change" controls>
+
+                <source src="Videos/advertisement.mp4" type="video/mp4">
+            </video>
+            <video  poster="team pic/thumbnail2.png" style="width: 65%; height: auto; border-radius: 8px; filter: blur(0px);" class="opacity-override video-change" controls>
+
+                <source src="Videos/graduation Video.mp4" type="video/mp4">
+            </video>
+        </div>
+
+
+
+    </article>
+
+    <!--  this is the section where it shows how it works -->
+    <section class="how-it-works animated">
+        <h1> Mission and Vision Statement</h1>
+        <!-- i used flex boxed here and basically each div is one container for the components such as the icon, header and text -->
+
+        <section>
+            <div class="animated">
+                <img class="icons box-shadow-remove" src="main/icon.png" />
+                <h2> Our  Mission</h2>
+                <p> To produce globally competent graduates equipped with knowledge, skills, and attitudes related to their program.  </p>
+            </div>
+            <div class="animated">
+                <img class="icons box-shadow-remove" src="main/icon2.png" />
+                <h2> Our Vision</h2>
+                <p> To be an international training entity that provides world-class education.</p>
+            </div>
+        </section>
+
+    </section>
+
+
+
+    <!-- this is for the insight information part where theres text over a picture -->
+    <section class="some-info">
+        <img src="main/buildings.jpg" />
+        <div class="info-box1 ">
+            <div> <h1> 24</h1> <p> Courses Offered</p></div>
+            <div> <h1> 100+</h1> <p> Students</p></div>
+            <div> <h1> 300+</h1> <p> Graduates</p></div>
+            <div> <h1> 4</h1> <p> Methods of Learning</p></div>
+        </div>
+    </section>
+
+    <section class="meet-the-team">
+        <h2> Meet some of our Students!</h2>
+
+        <div id="carouselExampleIndicators" class="carousel carousel-dark slide" data-ride="carousel">
+            <!--<ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            </ol>-->
+            <div class="carousel-inner">
+                <div class="carousel-item active ">
+                    <div class="d-flex justify-content-center ">
+                        <button class="brute-force index-override " type="button" data-toggle="modal" data-target=".bd-example-modal-sm1">
+                            <img class=" img-max-height index-override " src="team pic/group img4.jpg" alt="Second slide">
+                        </button>
+                    </div>
+                    <div class="modal fade bd-example-modal-sm1" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+                                <img class="width-overide index-override " src="team pic/group img4.jpg" alt="Second slide">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item  ">
+                    <div class="d-flex justify-content-center  ">
+                        <button class="brute-force index-override " type="button" data-toggle="modal" data-target=".bd-example-modal-sm2">
+                            <img class=" img-max-height index-override " src="team pic/group img1.jpg" alt="Second slide">
+                        </button>
+                    </div>
+                    <div class="modal fade bd-example-modal-sm2" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+                                <img class="width-overide index-override" src="team pic/group img1.jpg" alt="Second slide">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ">
+                    <div class="d-flex justify-content-center  ">
+                        <button class="brute-force index-override " type="button" data-toggle="modal" data-target=".bd-example-modal-sm3">
+                            <img class=" img-max-height index-override " src="team pic/group img2.jpg" alt="Second slide">
+                        </button>
+                    </div>
+                    <div class="modal fade bd-example-modal-sm3" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+                                <img class=" width-overide index-override" src="team pic/group img2.jpg" alt="Second slide">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ">
+                    <div class="d-flex justify-content-center  ">
+                        <button class="brute-force index-override " type="button" data-toggle="modal" data-target=".bd-example-modal-sm4">
+                            <img class=" img-max-height index-override " src="team pic/group img3.jpg" alt="Second slide">
+                        </button>
+                    </div>
+                    <div class="modal fade bd-example-modal-sm4" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+                                <img class=" width-overide index-override" src="team pic/group img3.jpg" alt="Second slide">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon " aria-hidden="true"></span>
+                <span class="sr-only ">Next</span>
+            </a>
+        </div>
+    </section>
+
+
+    <section class="gallery">
+        <h2 class="animated"> Activites </h2>
+        <section class="animated">
+            <div style="border-top-left-radius:10px;"> <img src="pictures/group-pic1.jpg" style="object-position: 40% 20%;"/></div>
+            <div> <img src="pictures/group-pic2.jpg" style="object-position: 70% 50%;" /></div>
+            <div style="border-top-right-radius:10px;"><img src="pictures/group-pic3.jpg" /></div>
+            <div> <img src="pictures/group-pic6.jpg" style="object-position: 30% 70%;" /></div>
+            <div> <img src="pictures/group-pic8.jpg" style="object-position: 60% 50%;" /></div>
+            <div> <img src="pictures/group-pic9.jpg" style="object-position: 70% 50%;" /></div>
+            <div style="border-bottom-left-radius:10px;"><img src="pictures/group-pic10.jpg" /></div>
+            <div><img src="pictures/group-pic5.jpg" /></div>
+            <div style="border-bottom-right-radius:10px;"><img src="pictures/group-pic11.jpg"style="object-position: 60% 20%;" /></div>
+        </section>
+    </section>
+
+    <section class="second-gif">
+        <video id="test" style="width:100%;" src="main/nature2.mp4" preload="auto" autoplay muted loop> </video>
+        <h2> Always striving for a better future.</h2>
+    </section>
+
+    <section class="courses" id="courses">
+
+        <h2> Courses we Offer</h2>
+
+        <div id="carouselExampleIndicators2" class="carousel carousel-dark slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators2" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators2" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators2" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators2" data-slide-to="3"></li>
+                <li data-target="#carouselExampleIndicators2" data-slide-to="4"></li>
+                <li data-target="#carouselExampleIndicators2" data-slide-to="5"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active ">
+                    <div class="d-flex justify-content-center ">
+                        <button class="brute-force index-override " type="button" data-toggle="modal" data-target=".bd-example-modal-sm11">
+                            <img class=" img-max-height index-override " src="team pic/courses.png" alt="Second slide">
+                        </button>
+                    </div>
+                    <div class="modal fade bd-example-modal-sm11" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                        <div class="modal-dialog  modal-dialog-centered">
+                            <div class="modal-content">
+                                <img class=" index-override " src="team pic/courses.png" alt="Second slide">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ">
+                    <div class="d-flex justify-content-center  ">
+                        <button class="brute-force index-override " type="button" data-toggle="modal" data-target=".bd-example-modal-sm14">
+                            <img class=" img-max-height index-override " src="team pic/courses3.png" alt="Second slide">
+                        </button>
+                    </div>
+                    <div class="modal fade bd-example-modal-sm14" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                        <div class="modal-dialog  modal-dialog-centered">
+                            <div class="modal-content">
+                                <img class=" index-override" src="team pic/courses3.png" alt="Second slide">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item  ">
+                    <div class="d-flex justify-content-center  ">
+                        <button class="brute-force index-override " type="button" data-toggle="modal" data-target=".bd-example-modal-sm12">
+                            <img class=" img-max-height index-override " src="team pic/courses1.jpg" alt="Second slide">
+                        </button>
+                    </div>
+                    <div class="modal fade bd-example-modal-sm12" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+                                <img class="width-overide index-override" src="team pic/courses1.jpg" alt="Second slide">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ">
+                    <div class="d-flex justify-content-center  ">
+                        <button class="brute-force index-override " type="button" data-toggle="modal" data-target=".bd-example-modal-sm15">
+                            <img class=" img-max-height index-override " src="pictures/bachelors2.png" alt="Second slide">
+                        </button>
+                    </div>
+                    <div class="modal fade bd-example-modal-sm15" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                        <div class="modal-dialog  modal-dialog-centered">
+                            <div class="modal-content">
+                                <img class=" index-override" src="pictures/bachelors2.png" alt="Second slide">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ">
+                    <div class="d-flex justify-content-center  ">
+                        <button class="brute-force index-override " type="button" data-toggle="modal" data-target=".bd-example-modal-sm16">
+                            <img class=" img-max-height index-override " src="pictures/bachelors1.png" alt="Second slide">
+                        </button>
+                    </div>
+                    <div class="modal fade bd-example-modal-sm16" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                        <div class="modal-dialog  modal-dialog-centered">
+                            <div class="modal-content">
+                                <img class=" index-override" src="pictures/bachelors1.png" alt="Second slide">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ">
+                    <div class="d-flex justify-content-center  ">
+                        <button class="brute-force index-override " type="button" data-toggle="modal" data-target=".bd-example-modal-sm13">
+                            <img class=" img-max-height index-override " src="team pic/courses2.png" alt="Second slide">
+                        </button>
+                    </div>
+                    <div class="modal fade bd-example-modal-sm13" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+                                <img class=" width-overide index-override" src="team pic/courses2.png" alt="Second slide">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators2" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators2" role="button" data-slide="next">
+                <span class="carousel-control-next-icon " aria-hidden="true"></span>
+                <span class="sr-only ">Next</span>
+            </a>
+        </div>
+
+
+
+    </section>
+
+    <section class="partners ">
+
+        <h1> Accredited </h1>
+        <div>
+            <img class="box-shadow-remove" src="team pic/accredited-logo3.png" style="position:relative; top:-1vh;" />
+            <img class="box-shadow-remove" src="team pic/accredited-logo1.png" />
+        </div>
+
+    </section>
+
+    <section class="get-in-touch" id="get-in-touch">
+        <h1> Get in touch</h1>
+        <section>
+            <div class="map">
+                <img style="width: 100%; height:75vh; object-fit:scale-down;"src="pictures/contact-us-img.PNG" />
+
+                
+            </div>
+
+            <div class="contact-box">
+                <div class="contact-text">
+
+                    <h3> Location </h3>
+                    <p>
+                        Level 17, World Trade Center, Abu Dhabi, UAE.<br />
+                        P.O Box 3876
+
+                    </p>
+                    <hr />
+                    <h3> Contact Us: </h3>
+                    <!--<p>Ms. Mharlet | +971-50-648-9507 </p>-->
+                    <p>
+                        WhatsApp #: 0506489507 <br />
+                        Call #: 0551272206
+                    </p>
+                    <hr />
+                    <h3> Timing:</h3>
+                    <p>
+                        Monday To Friday |  9:00 Am to 6:00 Pm <br />
+                        Saturday | 8:00 Am to 2:00 Pm <br />
+                        Sunday | Off
+                    </p>
+                    <hr />
+                    <h3> Registration</h3>
+                    <p> On Going  </p>
+
+
+                </div>
+
+            </div>
+        </section>
+    </section>
+
+    <footer>
+        <p class="copyrights"><a href="https://www.facebook.com/platinuminstitutemct2022" target="_blank"><img class="fb-logo" src="main/fb.png" /></a> Copyrights &#169;2022 Platinum Institue</p>
+    </footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    -->
+
+</body>
+
+
+</html>

@@ -1,0 +1,904 @@
+﻿/*these are the fonts that i decided to used or was going to use*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/*this is for the styling of the scrollbar*/
+/*this is the width of the scroll bar*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+/*the background of the scrollbar*/
+::-webkit-scrollbar-track {
+    background: #d0d0d0;
+    border-radius: 14px;
+    box-shadow: 0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+/*the the box where the scrollbar is on the page*/
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius:14px;
+}
+/* when the thumb is being hovered on*/
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/*makes it so when you scrol its smooth (scroll done by the other things)*/
+html {
+    scroll-behavior: smooth;
+}
+
+/*changes the font for all the texts*/
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+/*styling for body, added margin 0 since its originally has margin height auto is used so the nav bars position sticky works through out the whole body section otherwise id have to specify the exact height of the body*/
+body {
+    margin: 0;
+    height: auto;
+    background: #0f0f0f;
+    background: #f0f2f4;
+}
+
+/*the styling for the navigation bar, i added transition so when it fades from transparent to color after scrolling, index 999 so its on top of everything */
+nav {
+    background: none;
+    width: 100%;
+    height:75px;
+    position: sticky;
+    top: 0;
+    transition: ease-in-out 0.3s;
+    z-index:999;
+    box-shadow:none;
+}
+
+/* styling for the nav bars img which is also the logo for the website*/
+nav img {
+    position: relative;
+    top: 20%;
+    left: 14%;
+    width: 45px;
+    height: 45px;
+    float: left;
+    border-radius: 90px;
+}
+
+/*styling for the title next to the img */
+nav h1 {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    color: white;
+    position: relative;
+    top: 31%;
+    left: 15%;
+    float: left;
+    font-weight: 600;
+    font-size:1.4em;
+}
+
+/* for the navbar i decided to use a list to style the different links for the other pages of the website*/
+nav ul {
+    float: right;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    top: 35%;
+    right: 15%;
+}
+/* these are just the styling for the list item*/
+nav li {
+    float: left;
+    margin: 0 17px;
+    display: inline-block;
+}
+ 
+/*this is for the styling of the links itself*/
+nav a {
+    display: block;
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+    transition: all .5s;
+}
+
+nav.stroke ul li a{
+    position: relative;
+}
+
+/* this is the part that uses the ':after' that basically allows the hover effect to work*/
+nav.stroke ul li a:after
+    {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    height:3px;
+    content: '.';
+    color: transparent;
+    background: white;
+    height: 1px;
+}
+
+nav.stroke ul li a:hover:after {
+    width: 100%;
+    height: 3px;
+}
+
+/*body part*/
+
+main {
+    background: #0f0f0f;
+    background: #f0f2f4;
+}
+
+
+div#body-background {
+    position: relative;
+    top: -75px;
+    background: #0f0f0f;
+    height: 114%;
+    width: 100%;
+}
+
+/*this basically styles the video background to have grayscale and blur*/
+body video { 
+    height: auto;
+    width: 100%;
+    opacity: 0.7;
+    filter: grayscale(10%) blur( 1px);
+}
+
+/* for the most of my code ill be selecting the child element like this so if ever i use a div here and then use a div somewhere else that div somewhere else wont get efected with the way im selecting the main of selecting would be 'section.classname' then a div, h1 or another section depening on what i used*/
+
+/* this is the styling for the title and text on on the start of the screen, i put position absolute so it centers infront of my video background*/
+main article {
+    position: absolute;
+    top: 32%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+/*simple styling for the title*/
+main h2 {
+    font-family: 'Kanit',sans-serif;
+    margin: 0% auto 50px auto;
+    text-align: center;
+    font-weight: 500;
+    font-size: 5.5rem;
+    width: 75%;
+    color: white;
+    line-height: 1.1;
+}
+
+/*styling for the text*/
+main p {
+    font-family: 'Poppins',sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: white;
+    width: 60%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+/* styling for hte button*/
+main  a {
+    font-family: 'Kanit',sans-serif;
+    position: absolute;
+    top: 150%;
+    height: auto;
+    width: 200px;
+    font-weight: normal;
+    font-size: 18px;
+    color: black;
+    background: white;
+    border: none;
+    border-radius:30px;
+    cursor: pointer;
+    margin-left: auto;
+    text-align:center;
+    margin-right: auto;
+    padding:0.7% 0;
+    left: 0;   
+    right: 0;
+    transition: ease 20ms;
+    text-decoration:none;
+}
+
+main a:active {
+    transform: translateY(5px);
+    transition: ease-in 100ms;
+}
+
+    main a:hover {
+        transform: translateY(10px);
+        color: black !important;
+        transition: ease-in-out 100ms;
+    }
+    /* this is the first section as mention earlier the was of how ill select the child elements. also for the basically all my sections or styling in general i like to used vh otherwise known as veiw height just so its abit responsive but not entirely*/
+section.how-it-works {
+    position: relative;
+    background: #0f0f0f;
+    background: #f0f2f4;
+    height: 110vh;
+    width: 100%;
+}
+/* styling of the header*/
+    section.how-it-works h1 {
+        text-align: center;
+        margin: 0;
+        color: black;
+        font-size: 4rem;
+        font-family: 'Kanit';
+        font-weight: 500;
+        /*text-shadow: 2px 2px 2px #000000;
+        color: #dec205;    copy pasta
+        font-size: 4.5rem;
+        font-family: 'Kanit';
+        font-weight: 500;
+        text-shadow: 2px 2px 2px #000000;*/
+    }
+
+    section.how-it-works section {
+        margin-top: 7%;       
+        display: flex;
+        justify-content: center;
+        position: relative;
+        
+    }
+
+/* this is for one of the 'invisble box' to style the three different boxes for the how it works sections*/
+    section.how-it-works div {
+        background: none;
+        height: auto;
+        width: 24%;
+        margin: 0 4.4%;
+        top: 10%;      
+        box-shadow: 0.1em 0.1em 0.7em rgba(0,0,0,0.3);
+        padding:4% 2% 1% 2%;
+        border-radius: 15px;
+    }
+/*another styling for the title*/
+section.how-it-works h2 {
+    margin-top:13%;
+    color: black;
+    text-align:center;
+}
+
+section.how-it-works p {
+    margin: 12% 0 30% 0;
+    color: black;
+    text-align:center;
+}
+/* styling for the image that is used in the how it works section*/
+img.icons {
+    display:block;
+    width: 40%;
+    margin: auto;
+}
+
+/*this is for the section with the building background and text infront of it*/
+section.some-info {
+    position: relative;
+    background: black;
+    height: 57vh;
+    width: 100%;
+    box-shadow: 0.1em 0.1em 0.7em rgba(0,0,0,0.3);
+}
+
+/* here i used object fit so i dont have to manually crop the image to fit the div */
+section.some-info img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 10% 50%;
+    /*filter: grayscale(10%) ;*/
+    opacity:0.4;
+}
+
+/* here i didnt use flex box because i forgot those existed which made the code look rough but overall its just to design the text to be centered */
+div.info-box1 {
+    position: absolute;
+    top: 36vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    height: 30vh;
+    width: 89%;
+    z-index: 10;
+    display:flex;
+    justify-content:center;
+}
+/* this is for each of the information one div has one h1 and one p*/
+div.info-box1 div {
+    height: 220px;
+    width: 17%;
+    margin: 0 4%;
+}
+/*styling for the h1*/
+div.info-box1 h1 {
+    position:relative;
+    top:15%;
+    font-weight: 500;
+    margin:0;
+    font-size:4em;
+    left:15%;
+}
+/*styling for the p*/
+div.info-box1 p {
+    position:relative;
+    margin: 0;
+    top:9%;
+    left: 18%;
+}
+
+
+section.meet-the-team {
+    width: 100%;
+    height: 120vh;
+}
+
+    section.meet-the-team h2 {
+        text-align: center;
+        margin: 0;
+        padding: 7% 0 6% 0;
+        color: black;
+        font-size: 4.3rem;
+        font-family: 'Kanit';
+        font-weight: 500;
+    }
+
+    section.meet-the-team section {
+        margin:auto;
+        display: flex;
+        width:75%;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-bottom:19vh;
+    }
+
+    section.meet-the-team img {
+        border-radius:7px;
+    }
+
+    .grey-scale {
+        filter: grayscale(1);
+    }
+
+    /* another new section this is the one with the text and then the background is a road moving*/
+    section.second-gif {
+        background: black;
+        width: 100%;
+        height: 60vh;
+        box-shadow: 0.3em 0.3em 0.7em rgba(0,0,0,0.3);
+    }
+/*same concept i used for the main page i just used a video then edited that video*/
+section.second-gif  video {
+    width:100%;
+    height: 100%;
+    opacity: 0.5;
+    object-fit: cover;
+    object-position: 0%  80%;            
+}
+/* this is the for title text shown over the video*/
+section.second-gif h2 {
+    font-family: 'Montserrat';
+    width:60%;
+    color: white;
+    position: relative;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 4.7em;
+    font-weight: 300;
+}
+
+
+/*Pricing section  (this one was very tedious)  :(  <- sad face   */
+
+section.pricing {
+    width: 100%;
+    height: 95vh;
+    /*background: #f8f8f8;*/
+    background: url("team pic/dashed lines.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+/* this title is for the 'affordable prices' title*/
+    section.pricing h1 {
+        text-align: center;
+        margin: 0;
+        padding: 10vh 0 4vh 0;
+        color: black;
+        color: black;
+        font-size: 4rem;
+        font-family: 'Kanit';
+        font-weight: 500;
+    }
+
+/* this is the flex box for the thre different options available ,i used flex box here*/
+section.pricing section {
+    position:relative;
+    top:13vh;
+    display:flex;
+    justify-content:center;
+}
+
+/* this is for all of the div boxs */
+    section.pricing div {
+        width: 17%;
+        height: 33.7vh;
+        border-radius: 100%;
+        background: #4d1b24;
+        margin: 0 9%;
+    }
+
+    section.pricing main {
+        background:none;
+        text-align: center;
+        position: relative;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+    }
+
+    section.pricing h5 {
+        font-size: 1rem;
+    }
+
+    section.pricing h4 {
+        font-size: 3.9rem;
+        font-weight: 700;
+    }
+
+    section.pricing span {
+        font-size:1.3rem;
+        color:white;
+        opacity:0.7;
+        font-weight:600;
+        float:right;
+        width:100%;
+    }
+
+    section.pricing p {
+        width: 100%;
+        text-align:center;
+        margin:auto;
+        position: relative;
+        top: 30%;
+        opacity:0.5;
+        font-weight:500;
+        
+    }
+    /*  another section this one is for the partners*/
+    section.partners {
+        padding:2vh 0;
+        width: 100%;
+        height: auto;
+        background: #ffffff;
+        box-shadow: 0.3em 0.3em 1em rgba(0,0,0,0.3);
+    }
+
+/*styling for the heading */
+        section.partners h1 {
+            text-align: center;
+            margin: 0;
+            padding: 6vh 0 7vh 0;
+            color: black;
+            font-size: 4rem;
+            font-family: 'Kanit';
+            font-weight: 500;
+        }
+
+    section.partners div {
+        display:flex;
+        justify-content:center;
+        padding-bottom:6vh;
+    }
+
+    section.partners div img {
+        margin : 0 6%;
+        height:33vh;
+    }
+    /*Footer section */
+    footer {
+        background: #191b1d;
+        width: 100%;
+        height: 10vh;
+        color: white;
+        font-family: 'Poppins';
+        font-size: 0.9rem;
+    }
+
+    .fb-logo{
+        height: 3vh;
+        position:relative;
+        top:-0.2vh;
+        
+    }
+
+
+/*this is for the text found at the very bottom where it says copyrights*/
+footer p.copyrights {
+    display:block;
+    font-weight:600;
+    position: relative;
+    width:40%;   
+    height:10px;
+    margin:0 5% 1% 5%;
+    padding-top:2%;
+    background:none;
+    font-size:0.7rem;
+} 
+
+
+/* i just changed the font for the accordion since it was using a different one that boostrap provided*/
+button.accordion-button {
+    font-family: 'Poppins';
+    font-weight:600;
+}
+
+/* this is so the position sticky applies only until its needed*/
+section.what-is {
+    height: auto;
+    padding-bottom: 0vh;
+    background: #f0f2f4;
+    
+}
+/* this is the header where i used position sticky */
+    section.what-is h1 {
+        position: sticky;        
+        font-size: 4rem;
+        font-family: 'Kanit';
+        font-weight: 500;
+        /*text-shadow: 2px 2px 2px #000000;*/
+        top: 17%;
+        margin: 0 0 6% 10%;
+        z-index: 888;
+    }
+
+    
+
+    section.what-is section {
+        width: 100%;
+        height: 60vh;
+        margin: 3vh 0 3vh 0;
+        color: white;
+    }
+/* styling for hte images found in the what is seciton*/
+    section.what-is section img {
+        width: 20%;
+        position: relative;
+        top: 0;
+        left: 15%;
+        float: left;
+        opacity: 0.7;
+       /* box-shadow: 0.3em 0.3em 1em rgba(0,0,0,0.3);*/
+        border-radius:1px;
+    }
+/* styling for the divs*/
+section.what-is section div {
+    width: 45%;     
+    height: 100%;
+    float: right;
+    position:relative;
+    left:-4%;       
+
+}
+/* styling for the header*/
+    section.what-is h2 {
+        font-size: 4rem;
+        font-family: 'Kanit';
+        font-weight: 500;
+        text-align: left;
+        width: 100%;
+        line-height: 1.1;
+        letter-spacing: 2px;
+        word-spacing: 10px;
+        margin-bottom: 6%;
+        color: black;
+    }
+/* styling for the text under the header*/
+section.what-is p {
+    font-family: 'Poppins';
+    font-weight: 300;
+    font-size: 1em;
+    width: 89%;
+    text-align: left;
+    margin: 3% 0 0 0;
+    /*letter-spacing: 1px;
+    word-spacing: 1px;*/
+    line-height:28px;
+    color: black;
+}
+
+
+/* when a link is hovered i think this was for some sort of fix since i was using bootstrap*/
+a:hover {
+    text-decoration:none;
+    color:white;
+}
+
+
+/* this is the animation that enables fade in after it gets scrolled*/
+.animated {
+    opacity: 0;
+}
+/* the fade in animation*/
+.fade-in-top {
+    animation: fadeInTop;
+    animation-fill-mode: forwards;
+    animation-duration: 1.1s;
+    animation-timing-function: ease;
+}
+
+@keyframes fadeInTop {
+    0% {
+        opacity:0;
+        transform: translateY(90px);
+        
+    }
+
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+button {
+    transition: ease-in-out 400ms !important;
+}
+    button:active {
+        transform: translate(0, 10px) !important;
+        
+    }
+button:hover {
+    transform: translate(0, 10px);
+} 
+
+/* courses section*/
+
+section.courses {
+    background: #f0f2f4;
+    font-family: "Poppins";
+    font-weight: 500;
+    padding: 15vh 0 25vh 0;
+    height:auto;
+}
+
+    section.courses h2 {
+        text-align: center;
+        margin: 0 0 10vh 0;
+        color: black;
+        font-size: 4rem;
+        font-family: 'Kanit';
+        font-weight: 500;
+    }
+
+
+    /*get in touch*/
+    section.get-in-touch {
+        padding-top:8vh;
+        height: auto;
+        width: 100%;
+        margin-bottom: 20vh;
+    }
+
+section.get-in-touch section {
+    display:flex;
+    justify-content:center;
+}
+
+    section.get-in-touch section > div {
+        width: 45%;
+        height: 70vh;
+        background: white;
+        margin: 0 2%;
+    }
+
+    section.get-in-touch iframe {
+        width: 100%; 
+        height: 100%;
+
+    } 
+
+    section.get-in-touch div.map {
+        width:38%;
+        height:80vh;
+        padding: 1%;
+        box-shadow: 0.3em 0.3em 1em rgba(0,0,0,0.3);
+    }
+
+        section.get-in-touch h1 {
+            text-align: center;
+            margin: 0;
+            padding: 9vh 0 10vh 0;
+            color: black;
+            font-size: 4rem;
+            font-family: 'Kanit';
+            font-weight: 500;
+        }
+
+section.get-in-touch div.contact-text {
+    width: 90%;
+}
+
+section.get-in-touch div.contact-box {
+    background: none;
+    width:35%;
+    margin-top: 7%;
+}
+section.get-in-touch h2 {
+    color: black;
+    font-size: 2em;
+    font-family: 'poppins';
+    font-weight: 600;
+}
+
+    section.get-in-touch p {
+        font-weight:500;
+        width:71%;
+    }
+    section.get-in-touch h3 {
+        color: black;
+        font-size: 1.2em;
+        font-family: 'poppins';
+        font-weight: 600;
+    }
+
+/*bootstrap override*/
+.carousel-control-next,
+.carousel-control-prev , 
+.carousel-indicators  {
+    filter: invert(100%);
+}
+
+    .carousel-control-next, 
+    .carousel-control-prev {
+        width:30%;
+    }
+
+.carousel-indicators {
+    bottom: -10vh;
+}
+
+.img-max-height {
+    height: 70vh;
+    cursor: pointer;
+}
+
+.opacity-override {
+    opacity: 1 !important;
+}
+.index-override {
+    z-index:5 !important;
+    
+}
+
+.brute-force {
+    /*background: url('team pic/courses.png');*/
+    width: auto;
+    height: auto;
+    border: none !important;
+    outline: none !important;
+}
+
+    .brute-force:hover {
+        transform: translate(0);
+        opacity: .75;
+        
+        border: none !important;
+        outline: none !important;
+    }
+
+    .brute-force:active {
+        transform: translate(0) !important;
+        border: none !important;
+        outline: none !important;
+    }
+
+.width-overide {
+    width: 120% !important;
+    height: auto;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*.width.overide2 {
+    width: 200% !important;
+    height: auto;
+}*/
+
+.carousel-control-next:focus, .carousel-control-next:hover, .carousel-control-prev:focus, .carousel-control-prev:hover {
+    cursor:context-menu !important;
+}
+
+
+
+/* the gallery section*/
+section.gallery {
+    background:white;
+    width:100%;
+    height:210vh;   
+}
+/* galler heading*/
+    section.gallery h2 {
+        font-family: 'Kanit';
+        padding: 7% 0 7% 5%;
+        text-align: center;
+        color: black;
+        font-size: 4em;
+        font-weight: 500;
+    }
+/* using flex*/
+section.gallery section {
+    width:80%;
+    margin:auto;
+    height:105vh;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+
+}
+/* for one img*/
+section.gallery section div {
+    width: 33.33%;
+    height: 50%;
+    float: left;
+    background: black;
+    overflow: hidden;
+    border:2px solid white;
+}
+/*styling for the div*/
+section.gallery section div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 30% 10%;
+    transition: ease 700ms;
+    opacity:0.8;
+        
+}
+/* when the img get hovered its going to zoom in and darken cause of hte opacity lessening*/
+section.gallery section div img:hover {
+    width: 110%;
+    height: 110%;
+    object-position: 50% 40%;
+    opacity:0.6;
+}
+
+.video-change {
+    width: 40% !important;
+    margin: 0 1%;
+    box-shadow: 0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+
+img {
+    box-shadow: 0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+
+.box-shadow-remove{
+    box-shadow: none !important;
+}
