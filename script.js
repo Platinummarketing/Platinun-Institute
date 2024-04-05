@@ -5,7 +5,7 @@ window.onscroll = function () {
 };
 function scrollFunction() {
   if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
-    document.querySelector("nav").style.background = "#300403";
+    document.querySelector("nav").style.background = "#531412";
 
     document.querySelector("nav").style.boxShadow =
       "0.1em 0.1em 0.7em rgba(0, 0, 0, 0.3)";
@@ -57,3 +57,20 @@ container.addEventListener("wheel", function (e) {
   }
 });
 // That will work perfectly
+
+let currentSlide = 0;
+
+function moveSlide(direction) {
+  const slides = document.querySelector(".carousel-slide-container").children;
+  const totalSlides = slides.length;
+
+  if (direction === "next") {
+    currentSlide = (currentSlide + 1) % totalSlides;
+  } else {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+  }
+
+  const offset = -currentSlide * 100;
+  document.querySelector(".carousel-slide-container").style.transform =
+    "translateX(" + offset + "%)";
+}

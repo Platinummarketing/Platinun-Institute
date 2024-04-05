@@ -1,15 +1,15 @@
-﻿/*these are the fonts that i decided to used or was going to use*/
+﻿/* Imported fonts */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
-/*this is for the styling of the scrollbar*/
-/*this is the width of the scroll bar*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/* Scrollbar width */
 ::-webkit-scrollbar {
   width: 10px;
 }
-/*the background of the scrollbar*/
+/* Scrollbar track background */
 ::-webkit-scrollbar-track {
   background: #d0d0d0;
   border-radius: 14px;
@@ -24,17 +24,14 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-
 /*makes it so when you scrol its smooth (scroll done by the other things)*/
 html {
   scroll-behavior: smooth;
 }
-
 /*changes the font for all the texts*/
 * {
-  font-family: "Poppins", sans-serif;
+  font-family: "jomhuria", sans-serif;
 }
-
 /*styling for body, added margin 0 since its originally has margin height auto is used so the nav bars position sticky works through out the whole body section otherwise id have to specify the exact height of the body*/
 body {
   margin: 0;
@@ -42,7 +39,6 @@ body {
   background: #0f0f0f;
   background: #f0f2f4;
 }
-
 /*the styling for the navigation bar, i added transition so when it fades from transparent to color after scrolling, index 999 so its on top of everything */
 nav {
   background: none;
@@ -50,43 +46,44 @@ nav {
   height: 75px;
   position: sticky;
   top: 0;
-  transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.5s;
   z-index: 999;
   box-shadow: none;
 }
-
 /* styling for the nav bars img which is also the logo for the website*/
 nav img {
   position: relative;
   top: 20%;
-  left: 14%;
+  left: 10%;
   width: 45px;
   height: 45px;
   float: left;
   border-radius: 90px;
 }
-
 /*styling for the title next to the img */
 nav h1 {
-  font-family: "Poppins", sans-serif;
+  font-family: "jomhuria", sans-serif;
   margin: 0;
   color: white;
   position: relative;
-  top: 31%;
-  left: 15%;
   float: left;
-  font-weight: 600;
-  font-size: 1.4em;
+  font-weight: 400;
+  font-size: 3em;
+  height: 100%;
+  align-self: center;
+  top: 16%;
+  left: 11%;
 }
-
 /* for the navbar i decided to use a list to style the different links for the other pages of the website*/
 nav ul {
   float: right;
   margin: 0;
   list-style: none;
   position: relative;
-  top: 35%;
-  right: 15%;
+  right: 12%;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 /* these are just the styling for the list item*/
 nav li {
@@ -94,30 +91,26 @@ nav li {
   margin: 0 17px;
   display: inline-block;
 }
-
 /*this is for the styling of the links itself*/
 nav a {
-  display: block;
+  display: inline;
   color: white;
-  font-size: 15px;
+  font-size: 30px;
   text-decoration: none;
-  font-weight: 600;
+  /* font-weight: 600; */
 }
-
 nav ul li a,
 nav ul li a:after,
 nav ul li a:before {
   transition: all 0.5s;
 }
-
 nav.stroke ul li a {
   position: relative;
 }
-
 /* this is the part that uses the ':after' that basically allows the hover effect to work*/
 nav.stroke ul li a:after {
   position: absolute;
-  bottom: 0;
+  bottom: 1px;
   left: 0;
   right: 0;
   margin: auto;
@@ -128,19 +121,15 @@ nav.stroke ul li a:after {
   background: white;
   height: 1px;
 }
-
 nav.stroke ul li a:hover:after {
   width: 100%;
   height: 3px;
 }
-
 /*body part*/
-
 main {
   background: #0f0f0f;
   background: #f0f2f4;
 }
-
 div#body-background {
   position: relative;
   top: -75px;
@@ -148,17 +137,14 @@ div#body-background {
   height: 114%;
   width: 100%;
 }
-
 /*this basically styles the video background to have grayscale and blur*/
 body video {
   height: auto;
   width: 100%;
   opacity: 0.7;
-  filter: grayscale(10%) blur(1px);
+  /* filter: grayscale(10%) blur(1px); */
 }
-
 /* for the most of my code ill be selecting the child element like this so if ever i use a div here and then use a div somewhere else that div somewhere else wont get efected with the way im selecting the main of selecting would be 'section.classname' then a div, h1 or another section depening on what i used*/
-
 /* this is the styling for the title and text on on the start of the screen, i put position absolute so it centers infront of my video background*/
 main article {
   position: absolute;
@@ -168,22 +154,20 @@ main article {
   left: 0;
   right: 0;
 }
-
 /*simple styling for the title*/
 main h2 {
-  font-family: "Kanit", sans-serif;
+  font-family: "Jomhuria", serif;
   margin: 0% auto 50px auto;
   text-align: center;
-  font-weight: 500;
-  font-size: 5.5rem;
+  font-weight: 400;
+  font-size: 8.5rem;
   width: 75%;
   color: white;
   line-height: 1.1;
 }
-
 /*styling for the text*/
 main p {
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 18px;
   color: white;
@@ -217,7 +201,6 @@ main a {
   transition: ease 20ms;
   text-decoration: none;
 }
-
 .video-sliders {
   height: auto;
   width: 100%;
@@ -225,23 +208,19 @@ main a {
   overflow-x: scroll;
   background-color: #212121;
 }
-
 #main-scroller {
   scroll-behavior: smooth;
 }
-
 .main-video-slider {
   position: relative;
   left: 150px;
   width: auto;
   padding: 70px 1100px;
 }
-
 main a:active {
   transform: translateY(5px);
   transition: ease-in 100ms;
 }
-
 main a:hover {
   transform: translateY(10px);
   color: black !important;
@@ -262,8 +241,8 @@ section.how-it-works h1 {
   margin: 0;
   color: black;
   font-size: 4rem;
-  font-family: "Kanit";
-  font-weight: 500;
+  font-family: "Krub", sans-serif;
+  font-weight: 600;
   /*text-shadow: 2px 2px 2px #000000;
         color: #dec205;    copy pasta
         font-size: 4.5rem;
@@ -271,14 +250,12 @@ section.how-it-works h1 {
         font-weight: 500;
         text-shadow: 2px 2px 2px #000000;*/
 }
-
 section.how-it-works section {
   margin-top: 7%;
   display: flex;
   justify-content: center;
   position: relative;
 }
-
 /* this is for one of the 'invisble box' to style the three different boxes for the how it works sections*/
 section.how-it-works div {
   background: none;
@@ -296,7 +273,6 @@ section.how-it-works h2 {
   color: black;
   text-align: center;
 }
-
 section.how-it-works p {
   margin: 12% 0 30% 0;
   color: black;
@@ -308,7 +284,6 @@ img.icons {
   width: 40%;
   margin: auto;
 }
-
 /*this is for the section with the building background and text infront of it*/
 section.some-info {
   position: relative;
@@ -316,86 +291,62 @@ section.some-info {
   height: 57vh;
   width: 100%;
   box-shadow: 0.1em 0.1em 0.7em rgba(0, 0, 0, 0.3);
+  overflow: hidden;
 }
-
 /* here i used object fit so i dont have to manually crop the image to fit the div */
 section.some-info img {
-  width: 100%;
+  position: absolute;
+  width: 113%;
+  left: -9%;
   height: 100%;
   object-fit: cover;
   object-position: 10% 50%;
   /*filter: grayscale(10%) ;*/
   opacity: 0.4;
 }
-
 /* here i didnt use flex box because i forgot those existed which made the code look rough but overall its just to design the text to be centered */
 div.info-box1 {
-  position: absolute;
-  top: 36vh;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: auto;
+  position: relative;
   color: white;
-  height: 30vh;
+  height: 100%;
   width: 89%;
   z-index: 10;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 /* this is for each of the information one div has one h1 and one p*/
 div.info-box1 div {
+  padding-top: 3%;
   height: 220px;
   width: 17%;
   margin: 0 4%;
 }
 /*styling for the h1*/
 div.info-box1 h1 {
+  height: 80px;
+  width: auto;
+  margin: auto;
   position: relative;
   top: 15%;
   font-weight: 500;
   margin: 0;
-  font-size: 4em;
+  font-size: 5.5em;
   left: 15%;
 }
 /*styling for the p*/
 div.info-box1 p {
   position: relative;
+  font-size: 1.8em;
   margin: 0;
   top: 9%;
   left: 18%;
 }
 
-section.meet-the-team {
-  width: 100%;
-  height: 120vh;
-}
-
-section.meet-the-team h2 {
-  text-align: center;
-  margin: 0;
-  padding: 7% 0 6% 0;
-  color: black;
-  font-size: 4.3rem;
-  font-family: "Kanit";
-  font-weight: 500;
-}
-
-section.meet-the-team section {
-  margin: auto;
-  display: flex;
-  width: 75%;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding-bottom: 19vh;
-}
-
-section.meet-the-team img {
-  border-radius: 7px;
-}
-
 .grey-scale {
   filter: grayscale(1);
 }
-
 /* another new section this is the one with the text and then the background is a road moving*/
 section.second-gif {
   background: black;
@@ -413,7 +364,7 @@ section.second-gif video {
 }
 /* this is the for title text shown over the video*/
 section.second-gif h2 {
-  font-family: "Montserrat";
+  font-family: "Jomhuria", serif;
   width: 60%;
   color: white;
   position: relative;
@@ -421,112 +372,32 @@ section.second-gif h2 {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  font-size: 4.7em;
+  font-size: 6.6em;
   font-weight: 300;
 }
 
-/*Pricing section  (this one was very tedious)  :(  <- sad face   */
-
-section.pricing {
-  width: 100%;
-  height: 95vh;
-  /*background: #f8f8f8;*/
-  background: url("team pic/dashed lines.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
-}
-/* this title is for the 'affordable prices' title*/
-section.pricing h1 {
-  text-align: center;
-  margin: 0;
-  padding: 10vh 0 4vh 0;
-  color: black;
-  color: black;
-  font-size: 4rem;
-  font-family: "Kanit";
-  font-weight: 500;
-}
-
-/* this is the flex box for the thre different options available ,i used flex box here*/
-section.pricing section {
-  position: relative;
-  top: 13vh;
-  display: flex;
-  justify-content: center;
-}
-
-/* this is for all of the div boxs */
-section.pricing div {
-  width: 17%;
-  height: 33.7vh;
-  border-radius: 100%;
-  background: #4d1b24;
-  margin: 0 9%;
-}
-
-section.pricing main {
-  background: none;
-  text-align: center;
-  position: relative;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-}
-
-section.pricing h5 {
-  font-size: 1rem;
-}
-
-section.pricing h4 {
-  font-size: 3.9rem;
-  font-weight: 700;
-}
-
-section.pricing span {
-  font-size: 1.3rem;
-  color: white;
-  opacity: 0.7;
-  font-weight: 600;
-  float: right;
-  width: 100%;
-}
-
-section.pricing p {
-  width: 100%;
-  text-align: center;
-  margin: auto;
-  position: relative;
-  top: 30%;
-  opacity: 0.5;
-  font-weight: 500;
-}
 /*  another section this one is for the partners*/
 section.partners {
   padding: 2vh 0;
   width: 100%;
   height: auto;
   background: #ffffff;
-  box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
-
 /*styling for the heading */
 section.partners h1 {
   text-align: center;
   margin: 0;
   padding: 6vh 0 7vh 0;
   color: black;
-  font-size: 4rem;
-  font-family: "Kanit";
+  font-size: 7rem;
+  font-family: "Jomhuria", serif;
   font-weight: 500;
 }
-
 section.partners div {
   display: flex;
   justify-content: center;
   padding-bottom: 6vh;
 }
-
 section.partners div img {
   margin: 0 6%;
   height: 33vh;
@@ -537,35 +408,30 @@ footer {
   width: 100%;
   height: 10vh;
   color: white;
-  font-family: "Poppins";
-  font-size: 0.9rem;
 }
-
 .fb-logo {
   height: 3vh;
   position: relative;
   top: -0.2vh;
 }
-
 /*this is for the text found at the very bottom where it says copyrights*/
 footer p.copyrights {
+  font-family: "Roboto";
   display: block;
-  font-weight: 600;
+  font-weight: 400;
   position: relative;
   width: 40%;
   height: 10px;
-  margin: 0 5% 1% 5%;
+  margin: auto 5% auto 5%;
   padding-top: 2%;
   background: none;
-  font-size: 0.7rem;
+  font-size: 0.7em;
 }
-
 /* i just changed the font for the accordion since it was using a different one that boostrap provided*/
 button.accordion-button {
   font-family: "Poppins";
   font-weight: 600;
 }
-
 /* this is so the position sticky applies only until its needed*/
 section.what-is {
   height: auto;
@@ -574,30 +440,28 @@ section.what-is {
 }
 /* this is the header where i used position sticky */
 section.what-is h1 {
-  position: sticky;
+  position: static;
   font-size: 4rem;
-  font-family: "Kanit";
-  font-weight: 500;
+  font-family: "Roboto Slab", sans-serif !important;
+  font-weight: 700;
   /*text-shadow: 2px 2px 2px #000000;*/
   top: 17%;
   margin: 0 0 6% 10%;
   z-index: 888;
 }
-
 section.what-is section {
   width: 100%;
-  height: 60vh;
+  height: 65vh;
   margin: 3vh 0 3vh 0;
   color: white;
 }
-/* styling for hte images found in the what is seciton*/
 section.what-is section img {
-  width: 20%;
+  width: 37%;
   position: relative;
-  top: 0;
-  left: 15%;
+  top: -1%;
+  left: 8%;
   float: left;
-  opacity: 0.7;
+  opacity: 1;
   /* box-shadow: 0.3em 0.3em 1em rgba(0,0,0,0.3);*/
   border-radius: 1px;
 }
@@ -611,37 +475,48 @@ section.what-is section div {
 }
 /* styling for the header*/
 section.what-is h2 {
-  font-size: 4rem;
-  font-family: "Kanit";
-  font-weight: 500;
+  font-size: 3rem;
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: 800;
   text-align: left;
   width: 100%;
-  line-height: 1.1;
-  letter-spacing: 2px;
   word-spacing: 10px;
-  margin-bottom: 6%;
+  margin-bottom: 3%;
   color: black;
 }
 /* styling for the text under the header*/
 section.what-is p {
-  font-family: "Poppins";
-  font-weight: 300;
-  font-size: 1em;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 1.1em;
   width: 89%;
   text-align: left;
-  margin: 3% 0 0 0;
+  margin: 1% 0 20px 0;
   /*letter-spacing: 1px;
     word-spacing: 1px;*/
-  line-height: 28px;
+  line-height: 170%;
   color: black;
 }
 
+section.what-is ul {
+  padding-left: 20px;
+}
+
+section.what-is li {
+  font-family: "Roboto";
+  font-weight: 600;
+  font-size: 1.1em;
+  text-align: left;
+  /*letter-spacing: 1px;
+    word-spacing: 1px;*/
+  line-height: 170%;
+  color: black;
+}
 /* when a link is hovered i think this was for some sort of fix since i was using bootstrap*/
 a:hover {
   text-decoration: none;
   color: white;
 }
-
 /* this is the animation that enables fade in after it gets scrolled*/
 .animated {
   opacity: 0;
@@ -659,42 +534,37 @@ a:hover {
     opacity: 0;
     transform: translateY(90px);
   }
-
   100% {
     opacity: 1;
     transform: translateY(0px);
   }
 }
 
-button {
+.button-anim {
   transition: ease-in-out 400ms !important;
 }
-button:active {
+.button-anim:active {
   transform: translate(0, 10px) !important;
 }
-button:hover {
+.button-anim:hover {
   transform: translate(0, 10px);
 }
-
 /* courses section*/
-
 section.courses {
   background: #f0f2f4;
-  font-family: "Poppins";
+  font-family: "Jomhuria", serif;
   font-weight: 500;
   padding: 15vh 0 25vh 0;
   height: auto;
 }
-
 section.courses h2 {
   text-align: center;
   margin: 0 0 10vh 0;
   color: black;
-  font-size: 4rem;
-  font-family: "Kanit";
+  font-size: 7rem;
+  font-family: "Jomhuria", serif;
   font-weight: 500;
 }
-
 /*get in touch*/
 section.get-in-touch {
   padding-top: 8vh;
@@ -702,45 +572,39 @@ section.get-in-touch {
   width: 100%;
   margin-bottom: 20vh;
 }
-
 section.get-in-touch section {
   display: flex;
   justify-content: center;
 }
-
 section.get-in-touch section > div {
   width: 45%;
   height: 70vh;
-  background: white;
   margin: 0 2%;
 }
-
 section.get-in-touch iframe {
   width: 100%;
   height: 100%;
 }
-
 section.get-in-touch div.map {
   width: 38%;
   height: 80vh;
   padding: 1%;
   box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
-
 section.get-in-touch h1 {
   text-align: center;
   margin: 0;
-  padding: 9vh 0 10vh 0;
+  padding: 9vh 0 0 0;
   color: black;
-  font-size: 4rem;
-  font-family: "Kanit";
+  font-size: 7rem;
+  font-family: "Jomhuria", serif;
   font-weight: 500;
 }
-
 section.get-in-touch div.contact-text {
   width: 90%;
+  position: relative;
+  top: -30px;
 }
-
 section.get-in-touch div.contact-box {
   background: none;
   width: 35%;
@@ -749,49 +613,45 @@ section.get-in-touch div.contact-box {
 section.get-in-touch h2 {
   color: black;
   font-size: 2em;
-  font-family: "poppins";
+  font-family: "Jomhuria", serif;
   font-weight: 600;
 }
-
 section.get-in-touch p {
-  font-weight: 500;
+  font-family: Roboto;
+
+  font-weight: 600;
   width: 71%;
 }
 section.get-in-touch h3 {
   color: black;
-  font-size: 1.2em;
-  font-family: "poppins";
-  font-weight: 600;
+  font-size: 3em;
+  height: 40px;
+  font-family: "Jomhuria", serif;
+  font-weight: 400;
 }
-
 /*bootstrap override*/
 .carousel-control-next,
 .carousel-control-prev,
 .carousel-indicators {
   filter: invert(100%);
 }
-
 .carousel-control-next,
 .carousel-control-prev {
   width: 30%;
 }
-
 .carousel-indicators {
   bottom: -10vh;
 }
-
 .img-max-height {
   height: 70vh;
   cursor: pointer;
 }
-
 .opacity-override {
   opacity: 1 !important;
 }
 .index-override {
   z-index: 5 !important;
 }
-
 .brute-force {
   /*background: url('team pic/courses.png');*/
   width: auto;
@@ -799,21 +659,17 @@ section.get-in-touch h3 {
   border: none !important;
   outline: none !important;
 }
-
 .brute-force:hover {
   transform: translate(0);
   opacity: 0.75;
-
   border: none !important;
   outline: none !important;
 }
-
 .brute-force:active {
   transform: translate(0) !important;
   border: none !important;
   outline: none !important;
 }
-
 .width-overide {
   width: 120% !important;
   height: auto;
@@ -823,19 +679,16 @@ section.get-in-touch h3 {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 /*.width.overide2 {
     width: 200% !important;
     height: auto;
 }*/
-
 .carousel-control-next:focus,
 .carousel-control-next:hover,
 .carousel-control-prev:focus,
 .carousel-control-prev:hover {
   cursor: context-menu !important;
 }
-
 /* the gallery section*/
 section.gallery {
   background: white;
@@ -892,16 +745,500 @@ section.prom-video {
   background-color: white;
   padding-bottom: 15vh;
 }
-
 .video-change {
   margin: 0 1%;
   box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
-
-img {
+.img-add-box-shadow {
   box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
 
-.box-shadow-remove {
-  box-shadow: none !important;
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-slide-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 100;
+}
+
+.carousel-arrow-left {
+  left: 0;
+}
+
+.carousel-arrow-right {
+  right: 0;
+}
+
+.custom-carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: 50px auto;
+  padding: 50px;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 3%,
+    rgb(59, 1, 2) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  box-shadow: inset 0 0 10px black;
+}
+
+.custom-carousel-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.custom-carousel-item {
+  flex: 0 0 calc(50% - 20px); /* Show only 2 videos per batch with spacing */
+  margin: 0 10px;
+  max-width: calc(50% - 20px);
+  transition: transform 0.5s ease;
+}
+
+.custom-carousel-item video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.custom-carousel-item:hover video {
+  transform: scale(1.05);
+}
+
+.custom-carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.3);
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+  z-index: 1; /* Ensure the buttons stay on top */
+}
+
+.custom-carousel-control:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.custom-carousel-control.prev {
+  left: 10px;
+}
+
+.custom-carousel-control.next {
+  right: 10px;
+}
+
+.custom-carousel-control-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #000;
+}
+
+.custom-carousel-control-box svg {
+  fill: #fff;
+}
+
+@media (max-width: 768px) {
+  .custom-carousel-item {
+    flex: 0 0 calc(100% - 20px); /* Show only 1 video per batch with spacing */
+    max-width: calc(100% - 20px);
+  }
+}
+
+/* Section styling */
+.mission-and-vision {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  position: relative;
+}
+
+.mission-main-box {
+  background-color: #531412;
+  width: 48%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.mission-inner-box {
+  height: 70vh;
+  width: 300px;
+  position: relative;
+  margin: auto auto auto 30%;
+  color: white;
+}
+.mission-inner-box h1 {
+  font-size: 9rem;
+  height: 110px;
+  letter-spacing: 3px;
+}
+
+.mission-inner-box hr {
+  background-color: white;
+  position: relative;
+  width: 40.8vw;
+  height: 1px;
+  left: -3.6vw;
+  z-index: 100;
+}
+
+.mission-inner-box hr::before {
+  content: "";
+  position: absolute;
+  left: -1%;
+  top: -4px;
+  height: 10px;
+  width: 10px;
+  border-radius: 90px;
+  background-color: white;
+  display: block;
+  align-self: center;
+}
+
+.mission-inner-box h3 {
+  font-family: "roboto";
+  font-size: 1.2rem;
+  letter-spacing: 0.8px;
+  font-weight: 500;
+}
+
+.mission-inner-box p {
+  font-family: roboto;
+  font-size: 1.2rem;
+  font-weight: 550;
+  width: 145%;
+  background-color: white;
+  height: auto;
+  padding: 40px 40px 40px 50px;
+  color: black;
+  margin-top: 50px;
+  border-radius: 4px;
+  position: relative;
+  right: 50px;
+  z-index: 9;
+}
+
+#mission::after {
+  content: "";
+  position: absolute;
+  background-color: #531412;
+  width: 10%;
+  height: 100%;
+  top: 0;
+  left: 45.6%;
+  transform: skew(-7deg) translateX(-45.6%);
+}
+
+.vission-main-box {
+  width: 52%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.vission-inner-box {
+  height: 70vh;
+  width: 300px;
+  position: relative;
+  margin: auto auto auto 23%;
+  color: white;
+}
+.vission-inner-box h1 {
+  font-size: 9rem;
+  height: 110px;
+  color: #531412;
+  letter-spacing: 3px;
+}
+
+.vission-inner-box hr {
+  background-color: #531412;
+  position: relative;
+  width: 37vw;
+  height: 1px;
+  right: 8vw;
+  z-index: 100;
+}
+
+.vission-inner-box hr::after {
+  content: "";
+  position: absolute;
+  left: 100%;
+  top: -4px;
+  height: 10px;
+  width: 10px;
+  border-radius: 90px;
+  background-color: #531412;
+  display: block;
+  align-self: center;
+}
+
+.vission-inner-box h3 {
+  color: #531412;
+  font-family: "roboto";
+  font-size: 1.2rem;
+  letter-spacing: 0.8px;
+  font-weight: 600;
+}
+
+.vission-inner-box p {
+  font-family: roboto;
+  font-size: 1.2rem;
+  font-weight: 550;
+  width: 145%;
+  background-color: #f9fafb;
+  height: auto;
+  padding: 40px 40px 40px 50px;
+  color: black;
+  margin-top: 50px;
+  border-radius: 4px;
+  position: relative;
+  right: 50px;
+  z-index: 9;
+}
+
+.highlight-text {
+  font: inherit;
+  color: #d69f3b;
+}
+
+/* Gallery section styling */
+.gallery-container {
+  max-width: 90%;
+  margin: 0 auto;
+  margin-bottom: 5vh;
+  padding: 50px 20px;
+}
+
+.gallery-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.gallery-header h2 {
+  font-size: 8rem;
+  height: 120px;
+  color: #333;
+}
+
+.gallery-header p {
+  font-size: 4rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+  object-fit: cover;
+  width: 100%;
+  height: 250px;
+  display: block;
+}
+
+/* .gallery-item:hover img {
+  transform: scale(1.05);
+} */
+
+.gallery-item-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item-overlay:hover {
+  opacity: 1;
+}
+
+.gallery-item-overlay p {
+  color: #fff;
+  font-size: 18px;
+}
+
+.message-area {
+  overflow: hidden;
+  width: auto;
+  height: auto;
+  margin-bottom: 10vh;
+}
+
+.message-area-main-separator {
+  display: flex;
+  align-items: center;
+}
+
+.message-area-text-section {
+  width: 45%;
+}
+
+.message-area-text-container {
+  position: relative;
+  left: 13%;
+  top: -5px;
+}
+
+.message-area-text-container h2 {
+  font-size: 4.6rem;
+  line-height: calc(100% - 20px);
+  margin-bottom: 15px;
+}
+
+.message-area-text-container p {
+  width: 600px;
+  font-size: 1.1rem;
+  font-family: Roboto;
+  line-height: 170%;
+  font-weight: 400;
+}
+
+.message-area-text-container ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.message-area-text-container li {
+  font-family: Roboto;
+  line-height: 170%;
+  font-weight: 600;
+}
+
+.message-area-img-section {
+  width: 55%;
+  padding: 0 1%;
+}
+
+.message-area-img-section img {
+  width: 100%;
+  margin: auto;
+}
+
+.c1-section-container {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 5vh;
+  padding: 50px 20px;
+  display: flex;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.c1-text-half,
+.c1-carousel-half {
+  flex: 1;
+}
+
+.c1-text-container {
+  position: relative;
+  left: 40px;
+  position: relative;
+  top: 50px;
+}
+
+.c1-text-container h2 {
+  font-size: 6rem;
+  height: 70px;
+}
+
+.c1-text-container h3 {
+  color: #555;
+  font-size: 4rem;
+}
+
+.c1-text-container p {
+  font-family: Roboto;
+}
+
+.c1-text-half {
+  padding-right: 20px;
+}
+
+.c1-carousel-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.c1-carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.c1-carousel-item {
+  flex: 0 0 100%;
+  min-width: 100%;
+}
+
+.c1-carousel-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.c1-carousel-pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.c1-carousel-pagination-item {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.c1-carousel-pagination-item.active {
+  background-color: #333;
 }
